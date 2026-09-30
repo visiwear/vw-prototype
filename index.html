@@ -1069,7 +1069,7 @@
     }
 
     function parseManifestText(text) {
-      const lines = text.split('\n').map(l => l.trim()).filter(l => l.length > 0 && !l.startsWith('#'));
+      const lines = text.split('\n').map(l => l.trim().replace(/^assets\//, '')).filter(l => l.length > 0 && !l.startsWith('#'));
       
       const newProductsMap = {};
       const newModelPhotos = [];
@@ -1082,7 +1082,7 @@
         if (parts.length === 2 && parts[0].toLowerCase() === 'user') {
           newModelPhotos.push({
             name: path,
-            url: path
+            url: 'assets/' + path
           });
         } else if (parts.length >= 3) {
           const brand = parts[0];
@@ -1103,7 +1103,7 @@
               
               newHistoryMap[prodKey].push({
                 type: isVideo ? 'video' : 'photo',
-                url: path,
+                url: 'assets/' + path,
                 date: `Tried with ${userPhotoId}`
               });
             }
@@ -1118,7 +1118,7 @@
               category: category,
               title: prodName,
               price: Math.floor(Math.random() * 80) + 25 + 0.99,
-              imageUrl: path,
+              imageUrl: 'assets/' + path,
               videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4'
             };
           }
@@ -1560,8 +1560,8 @@
             const videoEl = document.getElementById('rendered-output-video');
 
             const prod = state.activeTargetProduct;
-            const onlinePhotoPath = prod ? `${prod.brand}/${prod.category}/Tried-photo-${state.userProfile.activePhotoIndex + 1}-${prod.title}.jpg` : ONLINE_FALLBACKS.renders.photo;
-            const onlineVideoPath = prod ? `${prod.brand}/${prod.category}/Tried-photo-${state.userProfile.activePhotoIndex + 1}-${prod.title}.mp4` : ONLINE_FALLBACKS.renders.video;
+            const onlinePhotoPath = prod ? `assets/${prod.brand}/${prod.category}/Tried-photo-${state.userProfile.activePhotoIndex + 1}-${prod.title}.jpg` : ONLINE_FALLBACKS.renders.photo;
+            const onlineVideoPath = prod ? `assets/${prod.brand}/${prod.category}/Tried-photo-${state.userProfile.activePhotoIndex + 1}-${prod.title}.mp4` : ONLINE_FALLBACKS.renders.video;
 
             if (isVideo) {
               photoEl.classList.add('hidden');
