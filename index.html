@@ -889,6 +889,21 @@
      */
     window.onload = function() {
       renderApp();
+      
+      // Auto-fetch the manifest data on page load
+      fetch('https://prototype.visiwear.tech/data.txt')
+        .then(response => {
+          if (!response.ok) throw new Error('Network response failed');
+          return response.text();
+        })
+        .then(data => {
+          document.getElementById('manifest-textarea').value = data;
+          submitManifestText();
+        })
+        .catch(error => {
+          console.error('Failed to load data.txt:', error);
+          showToast('Failed to auto-load prototype feed.');
+        });
     };
 
     /*
