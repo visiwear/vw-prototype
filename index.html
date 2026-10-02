@@ -495,7 +495,7 @@
             <p class="text-xs text-emerald-300">50 Default Free Try-On Credits Have Been Credited to Your Wallet.</p>
           </div>
 
-          <div id="membership-plan" class="space-y-4">
+          <div class="space-y-4">
             <h4 class="text-sm font-bold uppercase tracking-wider text-zinc-400 text-center">Select Your Membership Plan</h4>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -655,8 +655,8 @@
                 <i data-lucide="sparkles" class="w-8 h-8 text-violet-500/50"></i>
               </div>
               <div>
-                <h4 class="text-base font-bold text-white">Ready for Neural Try-On</h4>
-                <p class="text-xs text-zinc-400 max-w-xs mt-1">Select your model photo from the left panel and click 'Render Virtual Try-On' or 'Generate Try-On Video' to view the AI output.</p>
+                <h4 class="text-base font-bold text-white">Ready to see how it looks on you</h4>
+                <p class="text-xs text-zinc-400 max-w-xs mt-1">Select your profile photo from the left panel and click 'Try It On Me' or 'See It In Motion' to preview your outfit.</p>
               </div>
             </div>
 
@@ -1532,7 +1532,6 @@
     function triggerAIRenderProcess(mode) {
       if (state.creditsRemaining <= 0) {
         showToast('Insufficient try-on credits remaining! Please upgrade plan.');
-        document.getElementById('membership-plan').classList.remove('hidden');
         return;
       }
 
@@ -1610,7 +1609,7 @@
             state.creditsRemaining = Math.max(0, state.creditsRemaining - 1);
             if (pId) state.triedItems.add(pId);
 
-            showToast(`AI Try-On ${isVideo ? 'Video' : 'Photo'} complete! Render generated.`);
+            showToast(`Your Try-On ${isVideo ? 'Video' : 'Photo'} Is Ready.`);
             renderApp();
           }, 400);
         }
