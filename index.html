@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Visiwear | Premium AI Fashion Try-On Experience</title>
+  <title>VISIWEAR | Intelligent Sizing & Virtual Fitting Platform</title>
   
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -133,7 +133,7 @@
           </div>
           <div class="flex flex-col">
             <span class="font-black text-2xl tracking-wider text-white group-hover:text-violet-400 transition">VISIWEAR</span>
-            <span class="text-[9px] uppercase tracking-widest text-violet-400 font-semibold -mt-1">Neural AI Fitting Room</span>
+            <span class="text-[9px] uppercase tracking-widest text-violet-400 font-semibold -mt-1">Intelligent Sizing & Virtual Fitting Platform</span>
           </div>
         </a>
 
@@ -175,13 +175,13 @@
         <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-violet-600/15 via-transparent to-transparent"></div>
         <div class="relative z-10 max-w-2xl space-y-4">
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-violet-500/10 border border-violet-500/20 text-violet-400 text-xs font-semibold">
-            <i data-lucide="zap" class="w-3.5 h-3.5"></i> Next-Gen Neural Garment Warping
+            <i data-lucide="zap" class="w-3.5 h-3.5"></i> Proprietary Image-Fusion Architecture
           </div>
           <h1 class="text-3xl md:text-5xl font-extrabold text-white tracking-tight leading-tight">
-            Try Before You Buy with <span class="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-indigo-300">Photorealistic AI</span>
+            The AI Virtual Dressing Room: <span class="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-indigo-300">Slashed Returns, Elevated Conversions.</span>
           </h1>
           <p class="text-zinc-400 text-sm md:text-base leading-relaxed">
-            Eliminate sizing guesswork. Visualize high-street garments seamlessly rendered onto your exact body shape before placing orders.
+            Frictionless fit intelligence for the modern boutique. Allow your shoppers to instantly try on any garment online, receive an exact size recommendation, and check out with absolute confidence.
           </p>
         </div>
       </div>
@@ -193,7 +193,7 @@
             <h2 class="text-xl font-bold text-white flex items-center gap-2">
               <i data-lucide="shopping-bag" class="w-5 h-5 text-violet-400"></i> Curated Partner Catalogue
             </h2>
-            <p class="text-xs text-zinc-400">Select luxury brands and garment categories to explore dynamic try-on options.</p>
+            <p class="text-xs text-zinc-400">Select stores and garment categories to explore dynamic try-on options.</p>
           </div>
           <span class="text-xs bg-zinc-800 text-zinc-300 px-3 py-1.5 rounded-full border border-zinc-700">
             Showing <strong id="products-count" class="text-violet-400">0</strong> items
@@ -204,7 +204,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div class="space-y-1.5">
             <label class="text-xs font-semibold uppercase tracking-wider text-zinc-400 flex items-center gap-1.5">
-              <i data-lucide="tag" class="w-3.5 h-3.5 text-violet-400"></i> Select Brand
+              <i data-lucide="tag" class="w-3.5 h-3.5 text-violet-400"></i> Select Store
             </label>
             <select id="select-brand" onchange="handleFilterChange()" class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-sm text-zinc-200 focus:outline-none focus:border-violet-500 transition cursor-pointer">
               <option value="">No Feed Loaded</option>
@@ -241,7 +241,7 @@
 
           <!-- Top-level Brand Selection Dropdown -->
           <div class="flex items-center gap-2 bg-zinc-950 px-3 py-1.5 rounded-lg border border-zinc-800 text-xs">
-            <label class="text-zinc-400 font-semibold">Select Brand:</label>
+            <label class="text-zinc-400 font-semibold">Select Store:</label>
             <select id="partner-brand-select" onchange="handlePartnerBrandSelect()" class="bg-transparent text-violet-300 font-bold focus:outline-none cursor-pointer">
               <option value="">No Feed Loaded</option>
             </select>
@@ -291,10 +291,6 @@
             <h2 id="partner-product-title" class="text-xl font-black text-white">No Feed Loaded</h2>
             <p id="partner-product-price" class="text-2xl font-extrabold text-violet-400">£0.00</p>
             
-            <p class="text-xs text-zinc-400 leading-relaxed">
-              Import a feed or path manifest to populate partner store items.
-            </p>
-
             <!-- Visiwear Smart Size Recommendation Widget -->
             <div id="partner-size-widget" class="bg-zinc-900 p-3.5 rounded-xl border border-zinc-800 space-y-2">
               <!-- Rendered dynamically based on guest / authenticated state -->
@@ -315,7 +311,7 @@
             </button>
 
             <p class="text-[11px] text-center text-zinc-500">
-              Instant 3D rendering onto your profile model. Uses 1 Visiwear Try-On credit.
+              One-Feed Automated Ingestion. This customer interaction is fully covered via your store’s launch pilot subsidy, operating at zero cost to your storefront.
             </p>
           </div>
         </div>
@@ -399,7 +395,7 @@
           <form onsubmit="handleWizardStep1(event)" class="space-y-4">
             <div class="space-y-1.5">
               <label class="text-xs font-semibold uppercase tracking-wider text-zinc-300">Full Name</label>
-              <input type="text" id="reg-name" required placeholder="e.g. Jordan Smith" value="Jordan Smith" class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-sm text-zinc-100 focus:outline-none focus:border-violet-500 transition">
+              <input type="text" id="reg-name" required placeholder="e.g. Alex Taylor" value="Alex Taylor" class="w-full bg-zinc-950 border border-zinc-800 rounded-xl px-4 py-3 text-sm text-zinc-100 focus:outline-none focus:border-violet-500 transition">
             </div>
 
             <div class="space-y-1.5">
@@ -450,13 +446,13 @@
                 <input type="range" id="input-chest" min="70" max="140" value="96" oninput="document.getElementById('label-chest').innerText = this.value + ' cm'" class="w-full accent-violet-500 cursor-pointer">
               </div>
 
-              <!-- Belly Size Slider -->
+              <!-- Waist Size Slider -->
               <div class="bg-zinc-950 p-4 rounded-xl border border-zinc-800 space-y-2">
                 <div class="flex justify-between items-center text-xs">
-                  <span class="font-semibold text-zinc-300">Belly Size</span>
-                  <span id="label-belly" class="font-bold text-violet-400">82 cm</span>
+                  <span class="font-semibold text-zinc-300">Waist Size</span>
+                  <span id="label-waist" class="font-bold text-violet-400">82 cm</span>
                 </div>
-                <input type="range" id="input-belly" min="60" max="130" value="82" oninput="document.getElementById('label-belly').innerText = this.value + ' cm'" class="w-full accent-violet-500 cursor-pointer">
+                <input type="range" id="input-waist" min="60" max="130" value="82" oninput="document.getElementById('label-waist').innerText = this.value + ' cm'" class="w-full accent-violet-500 cursor-pointer">
               </div>
             </div>
 
@@ -476,7 +472,7 @@
               <div id="photo-preview-container" class="flex items-center gap-3 bg-zinc-950 p-3 rounded-xl border border-violet-500/40">
                 <img id="photo-preview-img" src="https://placehold.co/200x200/18181b/ffffff?text=No+Photo" onerror="handleImageFallback(this, 'model')" alt="Profile Preview" class="w-14 h-14 rounded-lg object-cover border border-violet-500">
                 <div>
-                  <span class="text-xs text-emerald-400 font-semibold flex items-center gap-1"><i data-lucide="info" class="w-3.5 h-3.5"></i> Model Photo Status</span>
+                  <span class="text-xs text-emerald-400 font-semibold flex items-center gap-1"><i data-lucide="info" class="w-3.5 h-3.5"></i> Profile Photo Status</span>
                   <span id="photo-preview-label" class="text-[11px] text-zinc-400">No Photo Selected</span>
                 </div>
               </div>
@@ -499,7 +495,7 @@
             <p class="text-xs text-emerald-300">50 Default Free Try-On Credits Have Been Credited to Your Wallet.</p>
           </div>
 
-          <div class="space-y-4">
+          <div id="membership-plan" class="space-y-4">
             <h4 class="text-sm font-bold uppercase tracking-wider text-zinc-400 text-center">Select Your Membership Plan</h4>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -509,8 +505,8 @@
                   <span class="text-xs font-bold text-zinc-400 uppercase">Free Tier</span>
                   <p class="text-2xl font-black text-white">£0 <span class="text-xs text-zinc-500 font-normal">/month</span></p>
                   <ul class="text-xs text-zinc-400 space-y-2 pt-2">
-                    <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> 50 High-Fidelity Try-Ons/mo</li>
-                    <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> Intelligent size recommendation</li>
+                    <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> 50 High-Fidelity Try-Ons per month</li>
+                    <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> Intelligent size-recommendation engine</li>
                     <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> Standard render queue</li>
                   </ul>
                 </div>
@@ -526,8 +522,9 @@
                   <span class="text-xs font-bold text-violet-400 uppercase">Style Booster</span>
                   <p class="text-2xl font-black text-white">£2.99 <span class="text-xs text-zinc-500 font-normal">/month</span></p>
                   <ul class="text-xs text-zinc-400 space-y-2 pt-2">
-                    <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> 100 Total Try-Ons/mo</li>
-                    <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> 5 Try-On Videos/mo</li>
+                    <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> 50 Additional Try-Ons</li>
+                    <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> 5 High-Fidelity Try-On Videos</li>
+                    <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> Everything in Free Tier</li>
                     <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> Faster render queue</li>
                   </ul>
                 </div>
@@ -542,8 +539,10 @@
                   <span class="text-xs font-bold text-indigo-400 uppercase">Fashion Fanatic</span>
                   <p class="text-2xl font-black text-white">£6.99 <span class="text-xs text-zinc-500 font-normal">/month</span></p>
                   <ul class="text-xs text-zinc-400 space-y-2 pt-2">
-                    <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> 200 Total Try-Ons/mo</li>
-                    <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> 10 Try-On Videos/mo</li>
+                    <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> 150 Additional Try-Ons</li>
+                    <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> 10 High-Fidelity Try-On Videos</li>
+                    <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> Multi-garment layering utility</li>
+                    <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> Everything in Style Booster</li>
                     <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> Priority render queue</li>
                   </ul>
                 </div>
@@ -571,7 +570,7 @@
           <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 space-y-4">
             <div class="flex items-center justify-between">
               <h3 class="text-xs font-bold text-zinc-400 uppercase tracking-wider flex items-center gap-1.5">
-                <i data-lucide="user" class="w-3.5 h-3.5 text-violet-400"></i> Select Model Photo for Fitting
+                📸 Select Your Profile Photo for Fitting
               </h3>
               <label for="studio-file-upload" class="text-xs text-violet-400 hover:text-violet-300 cursor-pointer font-semibold flex items-center gap-1">
                 <i data-lucide="upload" class="w-3 h-3"></i> Upload Local
@@ -597,24 +596,24 @@
               <div class="space-y-1">
                 <h4 id="studio-garment-title" class="font-bold text-white text-sm">No Garment Selected</h4>
                 <p id="studio-garment-price" class="text-violet-400 font-extrabold text-base">£0.00</p>
-                <span class="text-[10px] bg-violet-500/10 text-violet-400 border border-violet-500/20 px-2 py-0.5 rounded font-semibold inline-block">Feed Dependent</span>
+                <span id="studio-garment-brand" class="text-[10px] bg-violet-500/10 text-violet-400 border border-violet-500/20 px-2 py-0.5 rounded font-semibold inline-block">Feed Dependent</span>
               </div>
             </div>
           </div>
 
           <!-- Action Buttons: Generate Photo vs Generate Video -->
           <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 space-y-3">
-            <h3 class="text-xs font-bold text-zinc-400 uppercase tracking-wider">Execute Neural Rendering</h3>
+            <h3 class="text-xs font-bold text-zinc-400 uppercase tracking-wider">See how it looks</h3>
 
             <div class="grid grid-cols-2 gap-3">
               <button onclick="triggerAIRenderProcess('photo')" class="py-3.5 px-4 rounded-xl bg-violet-600 hover:bg-violet-500 text-white font-extrabold text-xs transition shadow-neon-violet flex flex-col items-center justify-center gap-1">
                 <i data-lucide="camera" class="w-5 h-5"></i>
-                <span>Generate Photo</span>
+                <span>⚡ Try It On Me</span>
               </button>
 
               <button onclick="triggerAIRenderProcess('video')" class="py-3.5 px-4 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-extrabold text-xs transition shadow-md flex flex-col items-center justify-center gap-1">
                 <i data-lucide="video" class="w-5 h-5"></i>
-                <span>Generate Video</span>
+                <span>🎬 See It In Motion</span>
               </button>
             </div>
 
@@ -639,8 +638,8 @@
               </div>
 
               <div class="text-center space-y-2 max-w-sm">
-                <h3 id="scan-status-title" class="text-lg font-bold text-white">Neural Mesh Warping Active...</h3>
-                <p id="scan-status-desc" class="text-xs text-zinc-400">Aligning skeletal landmarks and calculating cloth physics...</p>
+                <h3 id="scan-status-title" class="text-lg font-bold text-white">Analyzing Garment Metrics...</h3>
+                <p id="scan-status-desc" class="text-xs text-zinc-400">Optimizing fabric drape parameters...</p>
               </div>
 
               <div class="w-full max-w-xs bg-zinc-900 rounded-full h-2.5 overflow-hidden border border-zinc-800">
@@ -657,7 +656,7 @@
               </div>
               <div>
                 <h4 class="text-base font-bold text-white">Ready for Neural Try-On</h4>
-                <p class="text-xs text-zinc-400 max-w-xs mt-1">Select your model photo from the left panel and click 'Generate Photo' or 'Generate Video' to view the AI output.</p>
+                <p class="text-xs text-zinc-400 max-w-xs mt-1">Select your model photo from the left panel and click 'Render Virtual Try-On' or 'Generate Try-On Video' to view the AI output.</p>
               </div>
             </div>
 
@@ -666,11 +665,11 @@
               <div class="relative aspect-[3/4] max-h-[460px] mx-auto rounded-xl overflow-hidden bg-zinc-950 border border-violet-500/40 shadow-2xl">
                 
                 <!-- Output Photo Element -->
-                <img id="rendered-output-img" src="Next/Shirt/Green Long Sleeve Check Shirt.jpg" onerror="handleImageFallback(this, 'render_photo')" class="w-full h-full object-cover">
+                <img id="rendered-output-img" onerror="handleImageFallback(this, 'render_photo')" class="w-full h-full object-cover">
 
                 <!-- Output Video Element -->
                 <video id="rendered-output-video" autoplay loop muted playsinline onerror="handleVideoError(this)" class="w-full h-full object-cover hidden">
-                  <source src="Next/Shirt/Green Long Sleeve Check Shirt.jpg" type="video/mp4" onerror="handleVideoError(this.parentElement)">
+                  <source type="video/mp4" onerror="handleVideoError(this.parentElement)">
                   Your browser does not support HTML5 video playback.
                 </video>
               </div>
@@ -678,13 +677,13 @@
               <!-- Dedicated Fit Recommendation Info Card -->
               <div id="studio-fit-card" class="bg-zinc-950 p-4 rounded-xl border border-zinc-800 flex items-center justify-between gap-4 text-xs">
                 <div class="space-y-1">
-                  <div class="flex items-center justify-between text-xs">
-                    <span class="text-zinc-400 font-medium p-1">Smart Size Recommendation:</span>
+                  <div class="flex items-center justify-between text-xs gap-2">
+                    <span class="text-zinc-400 font-medium p-1">Visiwear Recommended Size:</span>
                     <span class="text-emerald-400 font-extrabold flex items-center gap-1">
                       <i data-lucide="check-circle" class="w-3.5 h-3.5"></i> Medium (UK 38-40)
                     </span>
                   </div>
-                  <p class="text-[11px] text-zinc-400 p-1">Calculated based on 178 cm height & 96 cm chest profile.</p>
+                  <p class="text-[11px] text-zinc-400 p-1">Analysis Summary: Based on your input dimensions (178 cm height & 96 cm chest), this garment provides a standard tailored fit with a 94% accuracy score.</p>
                 </div>
                 
                 <!-- Quick Link to View Already Tried Renders -->
@@ -747,7 +746,7 @@
           <i data-lucide="file-text" class="w-3.5 h-3.5"></i> Dynamic Data Engine
         </span>
         <h3 class="text-2xl font-black text-white">Load Local Paths Manifest</h3>
-        <p class="text-xs text-zinc-400">Paste or upload lines matching the local path schema to dynamically populate products, brands, categories, and user photos.</p>
+        <p class="text-xs text-zinc-400">Paste or upload lines matching the local path schema to dynamically populate products, stores, categories, and user photos.</p>
       </div>
 
       <div class="space-y-3">
@@ -783,7 +782,7 @@
   <footer class="bg-zinc-950 border-t border-zinc-800 py-8 mt-12">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-zinc-500">
       <div class="flex items-center gap-2">
-        <span class="font-bold text-zinc-300">VISIWEAR</span> &bull; <span>Neural AI Virtual Fitting System (UK)</span>
+        <span class="font-bold text-zinc-300">VISIWEAR</span> &bull; <span>Intelligent Sizing & Virtual Fitting Platform (UK)</span>
       </div>
       <div>
         &copy; 2026 Visiwear Technologies Ltd. All Rights Reserved.
@@ -867,11 +866,11 @@
       activeStudioMode: 'photo',
       
       userProfile: {
-        fullName: 'Jordan Smith',
+        fullName: 'Alex Taylor',
         gender: 'Male',
         heightCm: 178,
         chestCm: 96,
-        bellyCm: 82,
+        waistCm: 82,
         activePhotoIndex: -1,
         modelPhotos: []
       },
@@ -1019,8 +1018,14 @@
     }
 
     function resetCredits() {
-      state.creditsRemaining = 50;
+      if (state.creditsRemaining == 0) {
+        state.creditsRemaining = 50;
       showToast('Try-On credits reset to 50 Baseline!');
+      } else {
+        state.creditsRemaining = 0;
+      showToast('Try-On credits reset to 0 Baseline!');
+      }
+      
       renderApp();
     }
 
@@ -1221,7 +1226,7 @@
             </div>
             <div class="space-y-1">
               <h3 class="text-lg font-bold text-white">No Feed Loaded Yet</h3>
-              <p class="text-xs text-zinc-400 max-w-md mx-auto">Please load your feed or path manifest (.txt file or text feed) to dynamically bring through brands, categories, products, and model photos.</p>
+              <p class="text-xs text-zinc-400 max-w-md mx-auto">Please load your feed or path manifest (.txt file or text feed) to dynamically bring through stores, categories, products, and model photos.</p>
             </div>
             <button onclick="openManifestModal()" class="px-5 py-2.5 rounded-xl bg-violet-600 hover:bg-violet-500 text-white font-bold text-xs transition shadow-neon-violet inline-flex items-center gap-2">
               <i data-lucide="file-text" class="w-4 h-4"></i>
@@ -1320,20 +1325,20 @@
             </span>
           </div>
           <p class="text-[11px] text-zinc-500 leading-normal">
-            Sign in or set up your Visiwear profile to enable dynamic chest and waist fit analysis.
+            Sign in or set up your Visiwear profile to enable personalized size and fit recommendations.
           </p>
         `;
       } else {
         widget.innerHTML = `
           <div class="flex items-center justify-between text-xs">
-            <span class="text-zinc-400 font-medium">Smart Size Recommendation:</span>
+            <span class="text-zinc-400 font-medium">Visiwear Recommended Size:</span>
             <span class="text-emerald-400 font-extrabold flex items-center gap-1">
               <i data-lucide="check-circle" class="w-3.5 h-3.5"></i> Medium (UK 38-40)
             </span>
           </div>
           <div class="flex items-center gap-2 text-[11px] text-zinc-400">
             <span class="bg-zinc-950 px-2 py-0.5 rounded text-violet-300 font-semibold border border-zinc-800">178 cm / 96 cm</span>
-            <span>98.4% Fit Accuracy Score</span>
+            <span>94% Fit Accuracy Score</span>
           </div>
         `;
       }
@@ -1395,7 +1400,7 @@
       const name = document.getElementById('reg-name').value;
       const gender = document.getElementById('reg-gender').value;
 
-      state.userProfile.fullName = name || 'Jordan Smith';
+      state.userProfile.fullName = name || 'Alex Taylor';
       state.userProfile.gender = gender;
 
       document.getElementById('wizard-step-1').classList.add('hidden');
@@ -1410,7 +1415,7 @@
       event.preventDefault();
       state.userProfile.heightCm = document.getElementById('input-height').value;
       state.userProfile.chestCm = document.getElementById('input-chest').value;
-      state.userProfile.bellyCm = document.getElementById('input-belly').value;
+      state.userProfile.waistCm = document.getElementById('input-waist').value;
 
       document.getElementById('wizard-step-2').classList.add('hidden');
       document.getElementById('wizard-step-3').classList.remove('hidden');
@@ -1459,6 +1464,7 @@
       if (!product) return;
       document.getElementById('studio-garment-title').innerText = product.title;
       document.getElementById('studio-garment-price').innerText = `£${product.price.toFixed(2)}`;
+      document.getElementById('studio-garment-brand').innerText = product.brand;
       
       const img = document.getElementById('studio-garment-img');
       if (img) {
@@ -1526,6 +1532,7 @@
     function triggerAIRenderProcess(mode) {
       if (state.creditsRemaining <= 0) {
         showToast('Insufficient try-on credits remaining! Please upgrade plan.');
+        document.getElementById('membership-plan').classList.remove('hidden');
         return;
       }
 
@@ -1543,12 +1550,12 @@
       const isVideo = mode === 'video';
       
       const steps = isVideo ? [
-        { pct: 20, title: 'Extracting Dynamic Motion Fields...', desc: 'Constructing temporal keyframe sequence...' },
+        { pct: 20, title: 'Analyzing Garment Metrics...', desc: 'Optimizing fabric drape parameters...' },
         { pct: 50, title: 'Warping Garment Physics & Cloth Sim...', desc: 'Simulating gravity, velocity, and dynamic draping...' },
         { pct: 80, title: 'Ray-Tracing Video Frames...', desc: 'Rendering lighting pass across 60 FPS motion frames...' },
         { pct: 100, title: 'Try-On Video Complete!', desc: 'Finalizing temporal encoding...' }
       ] : [
-        { pct: 25, title: 'Keypoint Alignment Pass...', desc: 'Mapping 128 skeletal body landmarks onto model mesh...' },
+        { pct: 25, title: 'Analyzing Garment Metrics...', desc: 'Optimizing fabric drape parameters...' },
         { pct: 60, title: 'Neural Garment Warping...', desc: 'Calculating fabric elasticity and seam tension...' },
         { pct: 85, title: 'Photorealistic Lighting Pass...', desc: 'Synthesizing ray-traced shadows and ambient reflections...' },
         { pct: 100, title: 'Try-On Photo Complete!', desc: 'Final compositing pass complete.' }
@@ -1657,7 +1664,7 @@
 
           <div class="flex items-center justify-between text-xs text-zinc-300 bg-zinc-900 p-2.5 rounded-xl border border-zinc-800">
             <span class="font-bold text-emerald-400 flex items-center gap-1">
-              <i data-lucide="check-circle" class="w-3.5 h-3.5"></i> 98.4% Match
+              <i data-lucide="check-circle" class="w-3.5 h-3.5"></i> 94% Match
             </span>
             <span class="text-[11px] text-zinc-400">Visiwear Engine</span>
           </div>
