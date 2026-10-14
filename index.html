@@ -1561,7 +1561,7 @@
       ];
 
       const interval = setInterval(() => {
-        progress += 1;
+        progress += 5;
         counter.innerText = `${progress}%`;
         if (barFill) barFill.style.width = `${progress}%`;
 
@@ -1586,9 +1586,21 @@
 
             if (isVideo) {
               photoEl.classList.add('hidden');
+              // Set source on nested <source> tag if present
+              const sourceEl = videoEl.querySelector('source');
+              if (sourceEl) {
+                sourceEl.src = onlineVideoPath;
+              }
               videoEl.src = onlineVideoPath;
+              
               videoEl.classList.remove('hidden');
-              videoEl.play().catch(() => {});
+              
+              // Force video element to reload source and play
+              videoEl.load();
+              videoEl.play().catch((err) => {
+                console.warn("Autoplay blocked or stream load error:", err);
+                handleVideoError(videoEl);
+              });
             } else {
               videoEl.classList.add('hidden');
               photoEl.src = onlinePhotoPath;
