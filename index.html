@@ -840,12 +840,33 @@
       if (!videoEl || videoEl.getAttribute('data-fallback-attempted')) return;
       videoEl.setAttribute('data-fallback-attempted', 'true');
 
-      const sourceEl = videoEl.querySelector('source');
-      if (sourceEl) {
-        sourceEl.src = ONLINE_FALLBACKS.renders.video;
-        videoEl.load();
-        videoEl.play().catch(() => {});
-      }
+      const err = videoEl.error;
+      console.warn('Video failed to load:', videoEl.currentSrc || videoEl.src, err ? `code=${err.code} ${err.message || ''}` : '');
+
+      // NOTE: a `src` attribute on <video> takes precedence over <source> children,
+      // so the fallback must be applied to the video element itself.
+      videoEl.src = ONLINE_FALLBACKS.renders.video;
+      videoEl.load();
+      videoEl.play().catch(e => console.warn('Fallback video play() rejected:', e));
+    }
+
+    /**
+     * Encode each path segment so names containing spaces, '&', '#', '?', '%' etc. resolve correctly
+     */
+    function encodeAssetPath(path) {
+      return path.split('/').map(encodeURIComponent).join('/');
+    }
+
+    /**
+     * Load and play a video in the given element (resets fallback state for each new load)
+     */
+    function loadVideo(videoEl, url) {
+      videoEl.removeAttribute('data-fallback-attempted');
+      videoEl.muted = true; // required for autoplay policies
+      videoEl.src = url;
+      videoEl.load();
+      const playPromise = videoEl.play();
+      if (playPromise) playPromise.catch(e => console.warn('Video play() rejected:', e));
     }
 
     /*
@@ -1581,26 +1602,13 @@
             const videoEl = document.getElementById('rendered-output-video');
 
             const prod = state.activeTargetProduct;
-            const onlinePhotoPath = prod ? `assets/${prod.brand}/${prod.category}/Tried-photo-${state.userProfile.activePhotoIndex + 1}-${prod.title}.jpg` : ONLINE_FALLBACKS.renders.photo;
-            const onlineVideoPath = prod ? `assets/${prod.brand}/${prod.category}/Tried-photo-${state.userProfile.activePhotoIndex + 1}-${prod.title}.mp4` : ONLINE_FALLBACKS.renders.video;
+            const onlinePhotoPath = prod ? encodeAssetPath(`assets/${prod.brand}/${prod.category}/Tried-photo-${state.userProfile.activePhotoIndex + 1}-${prod.title}.jpg`) : ONLINE_FALLBACKS.renders.photo;
+            const onlineVideoPath = prod ? encodeAssetPath(`assets/${prod.brand}/${prod.category}/Tried-photo-${state.userProfile.activePhotoIndex + 1}-${prod.title}.mp4`) : ONLINE_FALLBACKS.renders.video;
 
             if (isVideo) {
               photoEl.classList.add('hidden');
-              // Set source on nested <source> tag if present
-              const sourceEl = videoEl.querySelector('source');
-              if (sourceEl) {
-                sourceEl.src = onlineVideoPath;
-              }
-              videoEl.src = onlineVideoPath;
-              
               videoEl.classList.remove('hidden');
-              
-              // Force video element to reload source and play
-              videoEl.load();
-              videoEl.play().catch((err) => {
-                console.warn("Autoplay blocked or stream load error:", err);
-                handleVideoError(videoEl);
-              });
+              loadVideo(videoEl, onlineVideoPath);
             } else {
               videoEl.classList.add('hidden');
               photoEl.src = onlinePhotoPath;
