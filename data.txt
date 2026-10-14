@@ -1,7 +1,7 @@
-assets/Rainbow & Spoon/Ladies Fashion/Basil Green Button Front Shirt Dress.jpg
-assets/Rainbow & Spoon/Ladies Fashion/Basil Green Sleeveless Knit Jumper.jpg
-assets/Rainbow & Spoon/Ladies Fashion/Tried-photo-2-Basil Green Button Front Shirt Dress.jpg
-assets/Rainbow & Spoon/Ladies Fashion/Tried-photo-2-Basil Green Button Front Shirt Dress.mp4
-assets/Rainbow & Spoon/Ladies Fashion/Tried-photo-2-Basil Green Sleeveless Knit Jumper.jpg
+assets/Rainbow and Spoon/Ladies Fashion/Basil Green Button Front Shirt Dress.jpg
+assets/Rainbow and Spoon/Ladies Fashion/Basil Green Sleeveless Knit Jumper.jpg
+assets/Rainbow and Spoon/Ladies Fashion/Tried-photo-2-Basil Green Button Front Shirt Dress.jpg
+assets/Rainbow and Spoon/Ladies Fashion/Tried-photo-2-Basil Green Button Front Shirt Dress.mp4
+assets/Rainbow and Spoon/Ladies Fashion/Tried-photo-2-Basil Green Sleeveless Knit Jumper.jpg
 assets/user/photo-1.jpg
 assets/user/photo-2.jpg
