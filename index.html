@@ -1514,7 +1514,7 @@
         const isSelected = index === state.userProfile.activePhotoIndex;
         return `
           <button onclick="selectStudioModelPhoto(${index})" class="relative aspect-square rounded-xl overflow-hidden border-2 ${isSelected ? 'border-violet-500 ring-2 ring-violet-500/50' : 'border-zinc-800 hover:border-zinc-700'} transition group">
-            <img src="${photo.url}" onerror="handleImageFallback(this, 'model')" alt="${photo.name}" class="w-full h-full object-cover group-hover:scale-105 transition">
+            <img src="${photo.url}" onerror="handleImageFallback(this, 'model')" alt="${photo.name}" class="w-full object-cover group-hover:scale-105 transition">
             ${isSelected ? `
               <div class="absolute inset-0 bg-violet-600/30 flex items-center justify-center">
                 <i data-lucide="check-circle" class="w-5 h-5 text-white"></i>
