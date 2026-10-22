@@ -1,7 +1,5 @@
-assets/Rainbow and Spoon/Ladies Fashion/Basil Green Button Front Shirt Dress.jpg
-assets/Rainbow and Spoon/Ladies Fashion/Basil Green Sleeveless Knit Jumper.jpg
-assets/Rainbow and Spoon/Ladies Fashion/Tried-photo-2-Basil Green Button Front Shirt Dress.jpg
-assets/Rainbow and Spoon/Ladies Fashion/Tried-photo-2-Basil Green Button Front Shirt Dress.mp4
-assets/Rainbow and Spoon/Ladies Fashion/Tried-photo-2-Basil Green Sleeveless Knit Jumper.jpg
+assets/Pettits Fashion/Dresses/First Avenue Classic Blue & White Floral Print Dress.png
+assets/Pettits Fashion/Dresses/First Avenue Sleeveless Floral Print Summer Dress.jpg
+assets/Pettits Fashion/Shirts/Double Two Blue & Yellow Check Shirt.jpg
 assets/user/photo-1.jpg
 assets/user/photo-2.jpg
